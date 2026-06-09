@@ -1,0 +1,19 @@
+# Railway config for Odysseus (self-hosted AI workspace).
+# Builds the upstream Dockerfile; the app listens on PORT (default 7000).
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# uvicorn binds the port Railway injects. PORT is pinned to 7000 in [variables]
+# so the proxy target and the listener always agree.
+startCommand = "uvicorn app:app --host 0.0.0.0 --port ${PORT:-7000}"
+# Liveness endpoint, allow-listed past auth in app.py.
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+# SQLite DB, sessions, auth, uploads, skills and caches all live under /app/data.
+requiredMountPath = "/app/data"
+
+[variables]
+PORT = "7000"
