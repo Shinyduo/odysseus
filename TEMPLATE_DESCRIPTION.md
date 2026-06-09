@@ -7,15 +7,15 @@
 
 ---
 
-![Odysseus open source self-hosted AI workspace and ChatGPT alternative](https://res.cloudinary.com/dojdzamvk/image/upload/v1777723896/odysseus_hero.png "Hosting Odysseus self-hosted AI workspace on Railway")
+![Odysseus open source self-hosted AI workspace and ChatGPT alternative chat interface](https://res.cloudinary.com/dh2nt6hgh/image/upload/v1780982827/Screenshot_2026-06-09_at_10.56.59_AM_i70jx3.png "Hosting Odysseus self-hosted AI workspace on Railway")
 
 # Deploy and Host self hosted Odysseus (Open-Source AI Workspace) on Railway
 
-Odysseus is an open-source, self-hosted AI workspace - the privacy-first version of the UI you get from ChatGPT and Claude. It brings chat across multiple LLM providers, an agent system with tool access, model management, deep research, side-by-side model comparison, document editing, persistent memory and skills, email, notes and tasks, and a CalDAV calendar into one mobile-responsive app. Bring your own model through any OpenAI-compatible API and keep every conversation on infrastructure you control.
+Odysseus is an open-source, self-hosted AI workspace from PewDiePie's archdaemon project - the privacy-first version of the UI you get from ChatGPT and Claude. It brings chat across multiple LLM providers, an agent system with tool access, model management, deep research, side-by-side model comparison, document editing, persistent memory and skills, email, notes and tasks, and a CalDAV calendar into one mobile-responsive app. Bring your own model through any OpenAI-compatible API and keep every conversation on infrastructure you control.
 
 ## About Hosting Odysseus open-source software on Railway (self hosted AI workspace template)
 
-Self hosting Odysseus means your chats, documents, memory, API keys, and email stay on infrastructure you own, with no usage caps and no third-party data retention. With Railway the full stack deploys automatically - the FastAPI web app, a ChromaDB vector store, a SearXNG engine for deep research, and an ntfy server, all wired over private networking with HTTPS and persistent volumes. Railway handles the orchestration so you skip Docker Compose, reverse proxy, and TLS setup.
+Self hosting Odysseus means your chats, documents, memory, API keys, and email stay on infrastructure you own, with no usage caps and no third-party data retention. With Railway the full stack deploys automatically - the FastAPI web app, a ChromaDB vector store, a SearXNG engine for deep research, and an ntfy server, all wired over private networking with HTTPS and volumes. Railway handles orchestration so you skip Docker Compose, reverse proxy, and TLS setup.
 
 ## Why Deploy Odysseus, the ChatGPT alternative on Railway (Railway Free Trial)
 
@@ -36,10 +36,10 @@ Here are common use cases for the open-source self-hosted AI workspace:
 * Running a private ChatGPT alternative where chat, memory, and documents stay on your own server with no vendor data retention.
 * Driving an AI agent with tool access to automate research, summarization, and multi-step tasks via the deep research engine.
 * Comparing answers from multiple LLM providers side by side, then editing the results in the built-in document editor.
-* Building persistent memory and reusable skills with the ChromaDB vector store so the assistant remembers context across sessions.
+* Building persistent memory and reusable skills with the ChromaDB vector store so the assistant remembers context.
 * Managing email, notes, tasks, and a CalDAV calendar from one workspace with push notifications via the bundled ntfy server.
 
-![Odysseus AI workspace chat, agents and deep research interface](https://res.cloudinary.com/dojdzamvk/image/upload/v1777723897/odysseus_workspace.png "Odysseus self-hosted AI workspace chat and agent interface")
+![Odysseus AI workspace settings and model configuration panel](https://res.cloudinary.com/dh2nt6hgh/image/upload/v1780982870/Screenshot_2026-06-09_at_10.57.44_AM_qng2z1.png "Odysseus self-hosted AI workspace settings and provider configuration")
 
 ## Dependencies for Odysseus Docker hosted on Railway
 
@@ -57,7 +57,7 @@ This template builds Odysseus from the official Dockerfile on Python 3.12, servi
 
 ### Odysseus vs ChatGPT (ChatGPT Alternative)
 * **Data Ownership:** Odysseus keeps every chat, document, and key on your server. ChatGPT stores everything on OpenAI infrastructure with limited export.
-* **Provider Choice:** Odysseus connects to any OpenAI-compatible model. ChatGPT locks you to OpenAI models on a fixed monthly plan.
+* **Provider Choice:** Odysseus connects to any OpenAI-compatible model. ChatGPT locks you to OpenAI on a fixed monthly plan.
 
 ### Odysseus vs Claude (Claude Alternative)
 * **Self Hosted:** Odysseus runs entirely on your infrastructure with persistent vector memory. Claude is a closed cloud product with no self-hosting.
@@ -68,7 +68,7 @@ This template builds Odysseus from the official Dockerfile on Python 3.12, servi
 * **Deep Research:** Odysseus includes a self-hosted SearXNG research pipeline. Open WebUI relies on external search add-ons.
 
 ### Odysseus vs LibreChat (LibreChat Alternative)
-* **Memory & Skills:** Odysseus has persistent ChromaDB memory and reusable skills built in. LibreChat needs extra configuration for similar features.
+* **Memory & Skills:** Odysseus has persistent ChromaDB memory and reusable skills built in. LibreChat needs extra setup for similar features.
 * **Notifications:** Odysseus integrates an ntfy push server for task and reminder alerts. LibreChat has no native notification layer.
 
 ## How to use Odysseus (the OSS AI workspace)?
@@ -90,11 +90,11 @@ Set up your model and access credentials:
 * `AUTH_ENABLED=true` and `SECURE_COOKIES=true` for production
 
 ### Start the Odysseus Application
-Run `docker compose up -d --build` and open `http://localhost:7000` once the containers report healthy.
+Run `docker compose up -d --build` and open `http://localhost:7000` once containers are healthy.
 
 ## Official Pricing of Odysseus (Odysseus pricing)
 
-Odysseus is free and open source under the **MIT license** with no platform fees, seats, or usage limits. You pay only for compute and for your own LLM API provider. Self hosting on Railway is the most cost-effective way to run the full AI workspace stack.
+Odysseus is free and open source under the **MIT license** with no platform fees, seats, or usage limits. You pay only for compute and your own LLM API provider. Self hosting on Railway is the most cost-effective way to run it.
 
 ## Odysseus cloud vs self hosted comparison (Pricing, features, costs, and more)
 
@@ -102,7 +102,7 @@ Odysseus is built for self hosting with full control over data, model choice, ag
 
 ### Monthly cost of self hosting Odysseus on Railway
 
-The Odysseus self hosting cost on Railway is typically $10-$20/month across the four services, plus the LLM API costs from your provider.
+The Odysseus self hosting cost on Railway is typically $10-$20/month across the four services, plus your LLM API costs.
 
 ### System Requirements for Hosting Odysseus on a VPS
 
@@ -114,7 +114,7 @@ Odysseus needs at least 2 vCPU, 4GB RAM, and 5GB storage for the app, ChromaDB, 
 Odysseus self hosted means running the open-source AI workspace on your own server (Railway, VPS, or Docker). You get full data ownership, agents, persistent memory, and unlimited usage without ChatGPT or Claude subscriptions.
 
 ### How much does Odysseus self hosting cost on Railway?
-The Odysseus self hosting cost on Railway is typically $10-$20/month for the four-service stack, plus the LLM API costs from your chosen provider.
+The Odysseus self hosting cost on Railway is typically $10-$20/month for the four-service stack, plus your LLM API costs.
 
 ### Is Odysseus free to use?
 Yes, Odysseus is fully open source and free under the MIT license. You only pay for infrastructure and your LLM API usage.
